@@ -14,13 +14,22 @@ public class Aluno {
 
     public Aluno() {}
 
-    public Aluno(String nome, String email, String telefone, Date dataNascimento, String plano, Boolean situacao) {
+    public Aluno(Integer id, String nome, String email, String telefone, LocalDate dataNascimento, String plano, Boolean situacaoCadastro) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
         this.dataNascimento = dataNascimento;
         this.plano = plano;
-        this.situacao = situacao;
+        this.situacaoCadastro = situacaoCadastro;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -47,11 +56,11 @@ public class Aluno {
         this.telefone = telefone;
     }
 
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -63,11 +72,11 @@ public class Aluno {
         this.plano = plano;
     }
 
-    public Boolean getSituacao() {
-        return situacao;
+    public Boolean getSituacaoCadastro() {
+        return situacaoCadastro;
     }
 
-    public void setSituacao(Boolean situacao) {
-        this.situacao = situacao;
+    public void setSituacaoCadastro(Boolean situacaoCadastro) {
+        this.situacaoCadastro = situacaoCadastro;
     }
 }
