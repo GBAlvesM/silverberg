@@ -3,6 +3,7 @@
     import FormularioAluno from "../componentes/FormularioAluno";
     import TabelaAlunos from "../componentes/TabelaAlunos";
     import styles from "./Alunos.module.css";
+    import logo from "../assets/logo-silverberg.png"
 
     export default function Alunos() {
         const [alunos, setAlunos] = useState([])
@@ -24,7 +25,8 @@
         return (
             <div className={styles.container}>
                 <header className={styles.cabecalho}>
-                    <h1>Sistema de Gestão - Silverberg</h1>
+                    <img src={logo} alt="logo silverberg" className={styles.logo}/>
+                    <h1>Sistema de Gestão</h1>
                 </header>
 
                 <main className={styles.conteudo}>

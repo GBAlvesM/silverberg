@@ -1,0 +1,73 @@
+.container {
+    flex: 0 0 380px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #dcd7ce;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h2 {
+    font-size: 30px;
+    color: #243128;
+    font-weight: 900;
+    border-left: 4px solid #c5a059;
+    padding-left: 10px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3f4e44;
+    margin-bottom: 2px;
+}
+
+.campo input, .campo select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.85rem;
+  font-size: 1rem;
+  color: #243128;
+  background-color: #fdfdfc;
+  border: 1px solid #c9c3b6;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.campo input:focus, .campo select:focus {
+  outline: none;
+  border-color: #c5a059;
+  background-color: #ffffff;
+}
+
+.container button {
+    width: 100%;
+    padding: 0.85rem;
+    margin-top: 0.75rem;
+    background: #1e2822;
+    color: #dfbe76;
+    border: 1px solid #c5a059;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .container button:hover {
+    background: #1e3822;
+    color: #ffffff;
+  }

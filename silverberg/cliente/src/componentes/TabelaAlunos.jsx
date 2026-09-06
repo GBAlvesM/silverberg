@@ -8,7 +8,7 @@ export default function TabelaAlunos({listaAlunos}) {
     return (
         <div className={styles.container}>
             <h2>Alunos Matriculados</h2>
-            <table>
+            <table className={styles.tabela}>
                 <thead>
                     <tr>
                         <th>Nome</th>
