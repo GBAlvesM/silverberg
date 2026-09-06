@@ -1,10 +1,9 @@
-import FormularioAluno from './componentes/FormularioAluno';
+import Alunos from "./pages/Alunos"
 
 export default function App() {
     return (
         <div>
-            <h1>Academia Silverberg</h1>
-            <FormularioAluno />
+            <Alunos />
         </div>
     )
 };

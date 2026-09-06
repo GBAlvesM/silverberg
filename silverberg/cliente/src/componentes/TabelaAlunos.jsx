@@ -27,7 +27,7 @@ export default function TabelaAlunos({listaAlunos}) {
                             <td>{aluno.telefone}</td>
                             <td>{aluno.dataNascimento}</td>
                             <td>{aluno.plano}</td>
-                            <td><span className={aluno.situacaoCadastro ? styles.inativo : styles.inativo}>
+                            <td><span className={aluno.situacaoCadastro ? styles.ativo : styles.inativo}>
                                 </span>{aluno.situacaoCadastro ? 'Ativo' : 'Inativo'}</td>
                         </tr>
                     ))}

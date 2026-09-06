@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './FormularioAluno.module.css';
 import axios from 'axios';
 
-export default function FormularioAluno() {
+export default function FormularioAluno( {aoCadastrar}) {
     const [formulario, setFormulario] = useState({
         nome: '',
         email: '',
@@ -22,6 +22,9 @@ export default function FormularioAluno() {
         axios.post('http://localhost:8080/alunos', formulario)
         .then((resposta) => {
             alert('Aluno cadastrado com sucesso');
+            if (aoCadastrar) {
+                aoCadastrar();
+            }
             setFormulario({
                 nome: '',
                 email: '',
