@@ -71,3 +71,19 @@
     background: #1e3822;
     color: #ffffff;
   }
+
+.inputErro {
+  border-color: #c53030 ;
+  background-color: #fffaf0 ;
+}
+
+.inputErro:focus {
+  box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.2);
+}
+
+.mensagemErro {
+  color: #9b1c1c;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
