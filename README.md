@@ -23,13 +23,12 @@ Aplicação web desenvolvida para cadastro, listagem e remoção de alunos da Si
 
 - [x] **Listagem de Alunos (GET):** busca os registros no banco de dados e exibe na tabela ao montar o componente (`useEffect`).
 - [x] **Cadastro de Alunos (POST):** formulário controlado com validações manuais antes do envio.
-- [x] **Exclusão de Alunos (DELETE):** remoção direta no banco via ID com diálogo de confirmação.
+- [x] **Exclusão de Alunos (DELETE):** remoção direta no banco via ID.
 - [x] **Atualização em Tempo Real:** a tabela atualiza instantaneamente após cadastrar ou excluir via *lifting state up* (callbacks), sem recarregar a página.
 - [x] **Validações no Front-end:**
   - Nome: preenchimento obrigatório e proibição de dígitos numéricos.
   - E-mail: preenchimento obrigatório com presença de `@` e ponto (`.`).
-  - Telefone: preenchimento obrigatório, apenas números e mínimo de 11 dígitos (com DDD).
-  - Data de Nascimento: preenchimento obrigatório e bloqueio de datas futuras.
+  - Telefone: preenchimento obrigatório, apenas números.
   - Plano: seleção obrigatória de uma opção válida.
 
 ---
@@ -38,11 +37,11 @@ Aplicação web desenvolvida para cadastro, listagem e remoção de alunos da Si
 
 **Endereço base:** `http://localhost:8080/alunos`
 
-| Método | Endpoint | Descrição | Status de Sucesso | Status de Erro |
-| :--- | :--- | :--- | :--- | :--- |
-| **GET** | `/alunos` | Retorna a lista de todos os alunos cadastrados | `200 OK` | `500 Internal Server Error` |
-| **POST** | `/alunos` | Cadastra um novo aluno no sistema | `201 Created` / `200 OK` | `400 Bad Request` / `500` |
-| **DELETE** | `/alunos/{id}` | Remove fisicamente um aluno pelo ID via SQL | `204 No Content` | `404 Not Found` / `500` |
+| Método | Endpoint | Descrição 
+| :--- | :--- | :--- 
+| **GET** | `/alunos` | Retorna a lista de todos os alunos cadastrados
+| **POST** | `/alunos` | Cadastra um novo aluno no sistema 
+| **DELETE** | `/alunos/{id}` | Remove fisicamente um aluno pelo ID via SQL
 
 ---
 
