@@ -1,8 +1,22 @@
 import styles from './TabelaAlunos.module.css';
+import axios from 'axios';
 
-export default function TabelaAlunos({listaAlunos}) {
+export default function TabelaAlunos({listaAlunos, aoDeletar}) {
     if (listaAlunos.length === 0) {
         return <p>Nenhum aluno cadastrado</p>
+    }
+
+    function deletarAluno (id) {
+        axios.delete(`http://localhost:8080/alunos/${id}`)
+        .then(() => {
+            alert('Aluno removido com sucesso!')
+            if (aoDeletar) {
+                aoDeletar()
+            }
+        })
+        .catch(() => {
+            alert('Erro ao excluir o aluno.')
+        })
     }
 
     return (
@@ -17,6 +31,7 @@ export default function TabelaAlunos({listaAlunos}) {
                         <th>Data de Nascimento</th>
                         <th>Plano</th>
                         <th>Situação do Cadastro</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,7 +43,9 @@ export default function TabelaAlunos({listaAlunos}) {
                             <td>{aluno.dataNascimento}</td>
                             <td>{aluno.plano}</td>
                             <td><span className={aluno.situacaoCadastro ? styles.ativo : styles.inativo}>
-                                </span>{aluno.situacaoCadastro ? 'Ativo' : 'Inativo'}</td>
+                                </span>{aluno.situacaoCadastro ? 'Ativo' : 'Inativo'}
+                            </td>
+                            <td><button className={styles.botaoExcluir} onClick={() => deletarAluno(aluno.id, aluno.nome)}>X</button></td>
                         </tr>
                     ))}
                 </tbody>

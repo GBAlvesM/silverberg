@@ -31,7 +31,7 @@
 
                 <main className={styles.conteudo}>
                     <FormularioAluno aoCadastrar={buscarAlunos} />
-                    <TabelaAlunos listaAlunos={alunos} />
+                    <TabelaAlunos listaAlunos={alunos} aoDeletar={buscarAlunos}/>
                 </main>
             </div>
         )
