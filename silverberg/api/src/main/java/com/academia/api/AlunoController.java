@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/alunos")
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:5173")
 public class AlunoController {
     private JdbcTemplate template;
 
@@ -83,5 +83,18 @@ public class AlunoController {
         } else {
             return ResponseEntity.status(200).body(resultado);
         }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarAluno(@PathVariable Integer id) {
+        String sql = "DELETE FROM aluno WHERE id = ?";
+
+        Integer linhas = template.update(sql,id);
+
+        if (linhas == 0) {
+            return ResponseEntity.status(404).build();
+        }
+
+        return ResponseEntity.status(204).build();
     }
 }
